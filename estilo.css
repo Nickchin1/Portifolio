@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Define margens e espaçamento consistentes para todos os elementos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    /* Define a fonte do corpo, cor do texto e o fundo da página */
+}
+
+header {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    /* Define o cabeçalho com fundo escuro e texto branco. Alinha o texto ao centro */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centraliza o conteúdo dentro de um contêiner com largura máxima */
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    /* Estiliza a imagem de perfil (redonda e com tamanho fixo) */
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Define as seções com padding e centraliza com uma largura máxima */
+}
+
+#sobre p {
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte na seção "Sobre" */
+}
+
+/* Centraliza o título "Meus Projetos" */
+#projetos h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2em; /* Tamanho maior para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Container dos projetos, com flexbox */
+.projetos-container {
+    display: flex; /* Organiza os projetos lado a lado */
+    justify-content: space-between; /* Espaça os projetos de forma igual entre eles */
+    gap: 20px; /* Espaço entre os cards dos projetos */
+    flex-wrap: wrap; /* Permite que os projetos se ajustem para a linha seguinte caso o espaço não seja suficiente */
+    margin-top: 20px;
+}
+
+/* Card de cada projeto */
+.projeto-card {
+    background-color: #f4f4f4; /* Cor de fundo do card */
+    border: 1px solid #ccc; /* Borda leve ao redor do card */
+    padding: 15px; /* Espaço interno do card */
+    width: 30%; /* Largura dos cards - Ajustado para 30% para ficarem lado a lado */
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para o card */
+}
+
+/* Imagem do projeto */
+.projeto-card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Arredonda as bordas da imagem */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Títulos dentro do card */
+.projeto-card h3 {
+    font-size: 1.5em; /* Tamanho maior para os títulos dos projetos */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Descrição do projeto */
+.projeto-card p {
+    font-size: 1em; /* Tamanho do texto da descrição */
+    color: #555; /* Cor do texto */
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Organiza os campos do formulário em coluna com espaçamento entre eles */
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* Estiliza os campos de input e textarea com bordas e padding */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #2d3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Estilo do botão de envio */
+}
+
+form button:hover {
+    background-color: #1c2a37;
+    /* Altera a cor do botão ao passar o mouse */
+}
+
+/* Estilo para as redes sociais */
+.redes-sociais {
+    margin-top: 20px;
+    text-align: center;
+    /* Centraliza os links das redes sociais */
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2d3e50;
+    /* Estilo para os links das redes sociais */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    /* Estiliza o rodapé com fundo escuro e texto branco */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column; /* Coloca os projetos um abaixo do outro em telas pequenas */
+        align-items: center; /* Centraliza os projetos */
+    }
+
+    .projeto-card {
+        width: 80%; /* Faz os cards ocuparem 80% da largura da tela */
+    }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 769px) {
+    .projetos-container {
+        flex-direction: row; /* Garante que os projetos fiquem lado a lado */
+        justify-content: space-between; /* Espaça os projetos de forma igual */
+    }
+
+    .projeto-card {
+        width: 30%; /* Tamanho fixo para os cards em telas grandes */
+    }
+}
