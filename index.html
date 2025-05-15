@@ -4,46 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio - Nickolas Cardoso</title>
-    <script src="funcoes.js"></script>
-    <style src="estilo.css"></style>
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-    <h1>Bem vindo ao meu portifólio!</h1>
-    <br>
-    <br>
-    <div class="topicos">
-        <h3>Sobre</h3>
-        <h3>Habilidades</h3>
-        <h3>Projetos</h3>
-        <h3>Contato</h3>
-    </div>
-    <br>
-    <br>
-    <div class="bio">
-        <h2>Sobre mim</h2>
+    <button class="trocar-tema" onclick="trocarTema()">Mudar Tema</button>
+    <header>
+        <h1>Bem vindo ao meu portfólio</h1>
+        <img src="imagens/foto.jpg" alt="Foto de perfil" class="foto-perfil">
+        <nav>
+            <button>Sobre</button>
+            <button>Habilidades</button>
+            <button>Projetos</button>
+            <button>Contato</button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="botao">Sobre mim</div>
         <p>Me chamo Nickolas e sou programador Junior, meu foco é em projeots redirecionados a python, mas também
             trabalho
             com desenvolvimento web. Nasci em Minas Gerais na cidade de Belo Horizonte, Atualmente curso Técnico em
             Analise
             e Desenvolvimento de sistemas</p>
-        <img src="Imagens/foto.jpg" alt="foto minha :)">
-    </div>
-    <br>
-    <br>
-    <div class="projetos">
-        <h2>Meus projetos</h2>
-        <p>Projeto 1 - Jogo da velha em python</p>
-        <p>Projeto 2 - Movimento sobre Janeiro Branco</p>
-        <p>Projeto 3</p>
-    </div>
-    <br>
-    <br>
-    <div class="habiidades">
-        <h2>Minhas habilidades</h2>
-        
-    </div>
+
+        <div class="botao">Meus projetos</div>
+        <p>Projeto 1 - Pedra papel e tesoura em python ✊✋✌️</p>
+        <p>Projeto 2 - Microcontêiner sobre Janeiro Branco</p>
+
+        <div class="botao">Minhas habilidades</div>
+        <div class="habilidade" style="background-color:#3A7BD5">Python - 50%</div>
+        <div class="habilidade" style="background-color:#F28C28">Java - 40%</div>
+        <div class="habilidade" style="background-color:#FFDD00; color:#000">JavaScript - 40%</div>
+        <div class="habilidade" style="background-color:#FF6B6B">HTML - 70%</div>
+        <div class="habilidade" style="background-color:#00B4D8">CSS - 60%</div>
+
+        <div class="botao">Entre em contato</div>
+        <form class="formulario">
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Email">
+            <textarea rows="4" placeholder="Digite sua mensagem..."></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="funcoes.js"></script>
 </body>
 
 </html>
