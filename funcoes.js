@@ -14,3 +14,30 @@ function trocarTema() {
   }
   temaClaro = !temaClaro;
 }
+
+function confirmarEnvio() {
+  alert("Mensagem enviada com sucesso! Obrigado por entrar em contato.");
+  return true;
+}
+
+function rolarPara(id) {
+  const elemento = document.getElementById(id);
+  if (elemento) elemento.scrollIntoView({ behavior: 'smooth' });
+}
+
+function destacarBotoes() {
+  const botoes = document.querySelectorAll(".botao");
+  botoes.forEach(botao => {
+    botao.addEventListener("mouseover", () => botao.style.transform = "scale(1.05)");
+    botao.addEventListener("mouseout", () => botao.style.transform = "scale(1)");
+  });
+}
+
+function mostrarMensagemInicial() {
+  console.log("Portfólio carregado com sucesso!");
+}
+
+window.onload = () => {
+  destacarBotoes();
+  mostrarMensagemInicial();
+}

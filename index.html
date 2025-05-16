@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio - Nickolas Cardoso</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="funcoes.js"></script>
 </head>
 
 <body>
@@ -14,42 +16,49 @@
         <h1>Bem vindo ao meu portfólio</h1>
         <img src="imagens/foto.jpg" alt="Foto de perfil" class="foto-perfil">
         <nav>
-            <button>Sobre</button>
-            <button>Habilidades</button>
-            <button>Projetos</button>
-            <button>Contato</button>
+            <button onclick="rolarPara('sobre')">Sobre</button>
+            <button onclick="rolarPara('habilidades')">Habilidades</button>
+            <button onclick="rolarPara('projetos')">Projetos</button>
+            <button onclick="rolarPara('contato')">Contato</button>
         </nav>
+
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/nickolas-cardoso-2998562ba/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://discord.com/users/464944091575091201" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/Nickchin1" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
     </header>
 
     <section>
-        <div class="botao">Sobre mim</div>
+        <div class="botao" id="sobre">Sobre mim</div>
         <p>Me chamo Nickolas e sou programador Junior, meu foco é em projeots redirecionados a python, mas também
-            trabalho
-            com desenvolvimento web. Nasci em Minas Gerais na cidade de Belo Horizonte, Atualmente curso Técnico em
-            Analise
-            e Desenvolvimento de sistemas</p>
+            trabalho com desenvolvimento web. Nasci em Minas Gerais na cidade de Belo Horizonte, Atualmente curso
+            Técnico em Analise e Desenvolvimento de sistemas
 
-        <div class="botao">Meus projetos</div>
-        <p>Projeto 1 - Pedra papel e tesoura em python ✊✋✌️</p>
-        <p>Projeto 2 - Microcontêiner sobre Janeiro Branco</p>
+        </p>
 
-        <div class="botao">Minhas habilidades</div>
+        <div class="botao" id="projetos">Meus projetos</div>
+        <p><a href="https://github.com/Nickchin1/Jogo-da-velha---python/blob/main/jogo-da-velha.py"
+                target="_blank">Projeto 1 - Pedra papel e tesoura em python ✊✋✌️</a></p>
+        <p><a href="https://nickchin1.github.io/Janeiro-Branco/" target="_blank">Projeto 2 - Projeto sobre
+                Janeiro Branco</a></p>
+
+        <div class="botao" id="habilidades">Minhas habilidades</div>
         <div class="habilidade" style="background-color:#3A7BD5">Python - 50%</div>
         <div class="habilidade" style="background-color:#F28C28">Java - 40%</div>
         <div class="habilidade" style="background-color:#FFDD00; color:#000">JavaScript - 40%</div>
         <div class="habilidade" style="background-color:#FF6B6B">HTML - 70%</div>
         <div class="habilidade" style="background-color:#00B4D8">CSS - 60%</div>
 
-        <div class="botao">Entre em contato</div>
-        <form class="formulario">
-            <input type="text" placeholder="Seu nome">
-            <input type="email" placeholder="Email">
-            <textarea rows="4" placeholder="Digite sua mensagem..."></textarea>
+        <div class="botao" id="contato">Entre em contato</div>
+        <form class="formulario" onsubmit="return confirmarEnvio()">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Digite sua mensagem..." required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </section>
-
-    <script src="funcoes.js"></script>
 </body>
 
 </html>
